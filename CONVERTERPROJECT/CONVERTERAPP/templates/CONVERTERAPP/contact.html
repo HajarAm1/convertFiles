@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Hajar Amara, Automation Engineer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Convert App</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: beige;
+            color: rgb(20, 40, 60);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.3em;
+        }
+
+        article {
+            margin: auto 0;
+        }
+
+        .mainDiv {
+            align-items: center;
+            border-style: intset;
+            border-color: white;
+            border-radius: 6px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            align-items: center;
+            color:navy;
+        }
+
+        .button1 {
+            color: black;
+            background-color: transparent;
+            border-color: beige;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        a {
+            color: rgb(20, 40, 60);
+        }
+
+        table,
+        td,
+        tr {
+            justify-content: center;
+        }
+
+        .DivBorder {
+            border-style: inset;
+            border-color: transparent;
+            border-radius: 6px;
+        }
+
+        .formFont {
+            font-size: small;
+        }
+
+    </style>
+</head>
+
+<body>
+<div>
+    <nav class="navbar navbar-expand-lg mb-5">
+        <i class="text-center btn btn-info fa fa-home"></i>
+        <div class="collapse navbar-collapse" id="navbarNav"></div>
+    </nav>
+    <div class="font-weight-bold">
+        <!--Section: Contact v.2-->
+        <section class="mb-md-4 text-center">
+            <!--Section heading-->
+            <h2 class="h1-responsive  text my-4">Contact us</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to
+                contact us directly. </p>
+
+            <div class="row ">
+
+                <!--Grid column-->
+                <div class="col-sm-5">
+
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-sm-4">
+                                <div class="sm-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control" value="Name">
+
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-8">
+                                <div class="md-form mb-4">
+                                    <input type="text" id="email" name="email" class="form-control" value="E-mail">
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-4">
+                                    <input type="text" id="subject" name="subject" class="form-control"
+                                           value="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="sm-form">
+                                                <textarea type="text" id="message" name="message" rows="2"
+                                                          class="form-control sm-textarea"> Your message</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                    <div class="text-center text-md-center">
+                        <button class="btn btn-info"
+                                onclick="document.getElementById('contact-form').submit();">Send
+                        </button>
+                    </div>
+                    <div class="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled">
+                        <li><i class="fa-2x"></i>
+                            <p>Zalafe, Ma'ale Iron</p>
+                        </li>
+
+                        <li><i class="mt-4 fa-2x"></i>
+                            <p>+ 972 52 221 6445</p>
+                        </li>
+
+                        <li><i class="mt-4 fa-2x"></i>
+                            <p>hajar.amara.9@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-sm-2 text-center">
+                </div>
+                <!--Grid column-->
+
+            </div>
+        </section>
+        <!--Section: Contact v.2-->
+    </div>
+
+    <footer> Hajar Amara
+        &copy
+        <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+
+        </script>
+    </footer>
+</div>
+
+</body>
+
+</html>

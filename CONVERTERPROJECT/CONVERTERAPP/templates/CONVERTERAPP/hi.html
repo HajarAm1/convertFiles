@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Hajar Amara, Automation Engineer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Convert App</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color:#F8F0E5;
+            color: #0F2C59;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.3em;
+        }
+        article {
+            margin: auto 0;
+        }
+        .mainDiv {
+            align-items: center;
+            border-style: intset;
+            border-color: white;
+            border-radius: 6px;
+        }
+        footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 2.5rem;
+              color:Navy;
+              background-color:#DFD7BF;
+        }
+
+        .button1 {
+            color: black;
+            background-color: transparent;
+            border-color: #F8F0E5;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        a {
+            color: rgb(20, 40, 60);
+        }
+        ul{
+        list-style-type: none;
+        }
+
+        table,
+        td,
+        tr {
+            justify-content: center;
+        }
+
+        .DivBorder {
+            border-style: inset;
+            border-color: transparent;
+            border-radius: 6px;
+        }
+
+        .formFont {
+            font-size: small;
+        }
+        .hiddenDiv{
+        display: none
+        }
+        .navColor{
+         background-color: #17a2b8;
+        }
+
+    </style>
+</head>
+
+<body>
+<div>
+    <nav class="navColor navbar navbar-expand-lg mb-5">
+        <i class="text-center btn btn-info fa fa-home"></i>
+        <div class="collapse navbar-collapse" id="navbarNav"></div>
+    </nav>
+
+    <div class="mainDiv">
+        <di class="row">
+            <div class="col-1"></div>
+            <div class="col-8">
+                <div>
+                    <h5> Hello &#128512;<br/> Here you can convert PDF images to text file OR pdf file
+                    </h5>
+                </div>
+                <table>
+                    <tr>
+                        </br>
+                        <th>
+                            <form method="post">
+                                {%csrf_token%}
+                                <input type="file" class="mb-5 btn-info" name="document">
+                                <button type="submit" class="mb-5 btn-info">Upload File</button>
+                            </form>
+                        </th>
+                    </tr>
+                </table>
+                <div class="mb-5">
+                    <ul>
+                        <li>
+                            <button class="button1" href="#">Convert to txt file</button>
+                        </li>
+                        <li>
+                            <button class="button1" href="#">Convert to pdf</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hiddenDiv">
+                    download converted file => <input type="file">
+                </div>
+            </div>
+        </di>
+    </div>
+    <!--        <div class="font-weight-bold">-->
+    <!--            &lt;!&ndash;Section: Contact v.2&ndash;&gt;-->
+    <!--            <section class="mb-md-4 text-center">-->
+    <!--                &lt;!&ndash;Section heading&ndash;&gt;-->
+    <!--                <h2 class="h1-responsive  text my-4">Contact us</h2>-->
+    <!--                &lt;!&ndash;Section description&ndash;&gt;-->
+    <!--                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to-->
+    <!--                    contact us directly. </p>-->
+
+    <!--                <div class="row ">-->
+    <!--                -->
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                    <div class="col-sm-5">-->
+
+    <!--                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">-->
+
+    <!--                            &lt;!&ndash;Grid row&ndash;&gt;-->
+    <!--                            <div class="row">-->
+
+    <!--                                &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                                <div class="col-sm-4">-->
+    <!--                                    <div class="sm-form mb-0">-->
+    <!--                                        <input type="text" id="name" name="name" class="form-control" value="Name">-->
+
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                &lt;!&ndash;Grid column&ndash;&gt;-->
+
+    <!--                                &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                                <div class="col-md-8">-->
+    <!--                                    <div class="md-form mb-4">-->
+    <!--                                        <input type="text" id="email" name="email" class="form-control" value="E-mail">-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                &lt;!&ndash;Grid column&ndash;&gt;-->
+
+    <!--                            </div>-->
+    <!--                            &lt;!&ndash;Grid row&ndash;&gt;-->
+    <!--                            &lt;!&ndash;Grid row&ndash;&gt;-->
+    <!--                            <div class="row">-->
+    <!--                                <div class="col-md-12">-->
+    <!--                                    <div class="md-form mb-4">-->
+    <!--                                        <input type="text" id="subject" name="subject" class="form-control"-->
+    <!--                                            value="Subject">-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            &lt;!&ndash;Grid row&ndash;&gt;-->
+    <!--                            <div class="row">-->
+    <!--                                &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                                <div class="col-md-12">-->
+
+    <!--                                    <div class="sm-form">-->
+    <!--                                        <textarea type="text" id="message" name="message" rows="2"-->
+    <!--                                            class="form-control sm-textarea"> Your message</textarea>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            &lt;!&ndash;Grid row&ndash;&gt;-->
+    <!--                        </form>-->
+    <!--                        <div class="text-center text-md-center">-->
+    <!--                            <button class="btn btn-info"-->
+    <!--                                onclick="document.getElementById('contact-form').submit();">Send</button>-->
+    <!--                        </div>-->
+    <!--                        <div class="status"></div>-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                    <div class="col-md-3 text-center">-->
+    <!--                        <ul class="list-unstyled">-->
+    <!--                            <li><i class="fa-2x"></i>-->
+    <!--                                <p>Zalafe, Ma'ale Iron</p>-->
+    <!--                            </li>-->
+
+    <!--                            <li><i class="mt-4 fa-2x"></i>-->
+    <!--                                <p>+ 972 52 221 6445</p>-->
+    <!--                            </li>-->
+
+    <!--                            <li><i class="mt-4 fa-2x"></i>-->
+    <!--                                <p>hajar.amara.9@gmail.com</p>-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+    <!--                    <div class="col-sm-2 text-center">-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash;Grid column&ndash;&gt;-->
+
+    <!--                </div>-->
+    <!--            </section>-->
+    <!--            &lt;!&ndash;Section: Contact v.2&ndash;&gt;-->
+    <!--        </div>-->
+
+</div>
+<footer class="row">
+    <div class="col-1"></div>
+    <div class="col-11">
+        Hajar Amara &copy
+        <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+
+        </script>
+    </div>
+</footer>
+
+</body>
+
+</html>
